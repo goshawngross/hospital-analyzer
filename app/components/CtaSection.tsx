@@ -1,0 +1,75 @@
+"use client";
+
+import { AnalysisResponse } from "@/lib/types";
+
+export default function CtaSection({ data }: { data: AnalysisResponse }) {
+  // Find weakest pillar for dynamic messaging
+  const weakest = [...data.pillars].sort((a, b) => a.score - b.score)[0];
+
+  return (
+    <div className="max-w-3xl mx-auto mt-16 animate-fade-in-up-delay-3">
+      <div className="rounded-3xl bg-gradient-to-br from-slate-900 to-slate-800 p-10 text-center text-white">
+        <p className="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-4">
+          Next Steps
+        </p>
+        <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">
+          Ready to make your website
+          <br />
+          agent-ready?
+        </h3>
+        <p className="mt-4 text-slate-400 text-sm leading-relaxed max-w-lg mx-auto">
+          Your site scored{" "}
+          <span className="text-white font-semibold">{weakest.grade}</span> on{" "}
+          <span className="text-white font-semibold">{weakest.pillar}</span>.{" "}
+          Sparkle CMS by Combinaut is purpose-built for hospital websites with
+          native agentic AI capabilities — structured data, API-first design,
+          FHIR integration, and more.
+        </p>
+
+        <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+          <a
+            href="https://combinaut.com"
+            target="_blank"
+            rel="noopener"
+            className="px-8 py-3.5 rounded-2xl bg-white text-slate-900 font-medium text-sm
+              hover:bg-slate-100 transition-colors"
+          >
+            See How Sparkle Fixes This
+          </a>
+          <a
+            href="https://hospitalwebsites.com"
+            target="_blank"
+            rel="noopener"
+            className="px-8 py-3.5 rounded-2xl bg-slate-700 text-white font-medium text-sm
+              hover:bg-slate-600 transition-colors ring-1 ring-slate-600"
+          >
+            Talk to a Hospital Web Strategist
+          </a>
+        </div>
+
+        <div className="mt-10 pt-6 border-t border-slate-700">
+          <p className="text-[11px] text-slate-500">
+            Brought to you by the creative minds at{" "}
+            <a
+              href="https://hospitalwebsites.com"
+              target="_blank"
+              rel="noopener"
+              className="text-slate-400 hover:text-white transition-colors"
+            >
+              HospitalWebsites.com
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://combinaut.com"
+              target="_blank"
+              rel="noopener"
+              className="text-slate-400 hover:text-white transition-colors"
+            >
+              Sparkle
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
