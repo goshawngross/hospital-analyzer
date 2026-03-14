@@ -18,12 +18,11 @@ export default function CtaSection({ data }: { data: AnalysisResponse }) {
           agent-ready?
         </h3>
         <p className="mt-4 text-slate-400 text-sm leading-relaxed max-w-lg mx-auto">
-          Your site scored{" "}
-          <span className="text-white font-semibold">{weakest.grade}</span> on{" "}
-          <span className="text-white font-semibold">{weakest.pillar}</span>.{" "}
-          Sparkle CMS by Combinaut is purpose-built for hospital websites with
-          native agentic AI capabilities — structured data, API-first design,
-          FHIR integration, and more.
+          Sparkle CMS by Combinaut is purpose-built for hospital websites —
+          including a Find-a-Doctor application designed from the ground up for
+          agentic AI. Structured data, API-first provider search, bookable
+          appointment slots, and FHIR integration — all ready for AI agents
+          out of the box.
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">

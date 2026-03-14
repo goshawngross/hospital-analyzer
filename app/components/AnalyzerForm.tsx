@@ -26,7 +26,7 @@ export default function AnalyzerForm({ onSubmit, isLoading }: AnalyzerFormProps)
       </h2>
       <p className="mt-5 text-lg text-slate-500 leading-relaxed max-w-lg mx-auto">
         Enter your website URL and we&apos;ll evaluate how well AI agents can
-        understand, navigate, and interact with your site.
+        understand, navigate, and book appointments on your site.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-10">

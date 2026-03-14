@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import AnalyzerForm from "./components/AnalyzerForm";
 import ProgressIndicator from "./components/ProgressIndicator";
 import Scorecard from "./components/Scorecard";
+import InsightBridge from "./components/InsightBridge";
 import CtaSection from "./components/CtaSection";
 import SpecialOffer from "./components/SpecialOffer";
 import { AnalysisResponse } from "@/lib/types";
@@ -111,6 +112,7 @@ export default function Home() {
             </div>
 
             <Scorecard data={results} />
+            <InsightBridge data={results} />
             <CtaSection data={results} />
             <SpecialOffer data={results} />
           </div>
