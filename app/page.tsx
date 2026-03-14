@@ -135,6 +135,42 @@ export default function Home() {
             </a>{" "}
             to learn more.
           </p>
+
+          {/* Logos — mobile only (hidden on sm+) */}
+          <div className="flex sm:hidden flex-col items-center gap-3 mt-8 pt-6 border-t border-slate-200/60">
+            <p className="text-[10px] uppercase tracking-widest text-slate-400 font-medium">
+              Brought to you by
+            </p>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://hospitalwebsites.com"
+                target="_blank"
+                rel="noopener"
+                className="opacity-80 hover:opacity-100 transition-opacity"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/hospitalwebsites-logo.webp"
+                  alt="HospitalWebsites.com"
+                  className="h-7 w-auto"
+                />
+              </a>
+              <span className="text-slate-300 text-xs">&amp;</span>
+              <a
+                href="https://www.sparkle.health/"
+                target="_blank"
+                rel="noopener"
+                className="opacity-80 hover:opacity-100 transition-opacity"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/sparkle-logo.png"
+                  alt="Sparkle"
+                  className="h-7 w-auto"
+                />
+              </a>
+            </div>
+          </div>
         </footer>
       </main>
     </div>

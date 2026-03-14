@@ -10,8 +10,9 @@ export default function Header() {
             For Hospital &amp; Health System Websites
           </p>
         </div>
-        <div className="flex items-center gap-4">
-          <p className="text-[10px] uppercase tracking-widest text-slate-400 font-medium hidden sm:block">
+        {/* Logos — hidden on mobile, shown on sm+ */}
+        <div className="hidden sm:flex items-center gap-4">
+          <p className="text-[10px] uppercase tracking-widest text-slate-400 font-medium">
             Brought to you by
           </p>
           <div className="flex items-center gap-3">
