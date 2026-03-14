@@ -1,17 +1,17 @@
-# Agentic Readiness Analyzer
+# AgentVitals
 
-> A free diagnostic tool that evaluates hospital and health system websites for AI agent readiness — how well AI agents can understand, navigate, and book appointments on the site.
+> The AI readiness check for hospital websites. A free diagnostic tool that evaluates how well AI agents can understand, navigate, and book appointments on hospital and health system websites.
 
 ## About
 
-The Agentic Readiness Analyzer scores hospital websites across four pillars:
+AgentVitals scores hospital websites across four pillars:
 
 - **Semantic Richness** (25%): Structured data, Schema.org markup, JSON-LD, OpenGraph metadata
 - **Actionability Surface** (30%): Booking links, appointment scheduling, digital pathways vs phone-only, CTAs
 - **DOM Navigability** (25%): ARIA labels, semantic HTML, accessibility, server-rendered content
 - **Integration Protocol Readiness** (20%): robots.txt, llms.txt, sitemap.xml, FHIR endpoints, OpenAPI specs, AI plugin manifests
 
-Each pillar receives a letter grade (A through D) and the site receives an overall Agentic Readiness score out of 100.
+Each pillar receives a letter grade (A through D) and the site receives an overall AI Readiness score out of 100.
 
 ## Why It Matters
 
@@ -19,7 +19,7 @@ AI agents are already attempting to search for doctors, check availability, and 
 
 ## Who Built This
 
-This tool is a joint effort by [HospitalWebsites.com](https://hospitalwebsites.com) and [Sparkle by Combinaut](https://www.sparkle.health/). Sparkle CMS is purpose-built for hospital websites with a Find-a-Doctor application designed from the ground up for agentic AI — structured data, API-first provider search, bookable appointment slots, and FHIR integration.
+AgentVitals is a joint effort by [HospitalWebsites.com](https://hospitalwebsites.com) and [Sparkle by Combinaut](https://www.sparkle.health/). Sparkle CMS is purpose-built for hospital websites with a Find-a-Doctor application designed from the ground up for agentic AI — structured data, API-first provider search, bookable appointment slots, and FHIR integration.
 
 ## Links
 

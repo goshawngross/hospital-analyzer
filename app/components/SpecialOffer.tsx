@@ -27,7 +27,7 @@ export default function SpecialOffer({ data }: { data: AnalysisResponse }) {
         body: JSON.stringify({
           access_key: "8a27b57d-65d6-4e09-a95c-a23c40d9ab72",
           subject: `New Lead: ${email.trim()} — llms.txt request`,
-          from_name: "Hospital Analyzer",
+          from_name: "AgentVitals",
           email: email.trim(),
           "Website Analyzed": data.url,
           "Overall Grade": `${data.overallGrade} (${data.overallScore}/100)`,

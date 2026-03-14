@@ -30,9 +30,9 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         access_key: WEB3FORMS_KEY,
         subject: `New Lead: ${body.email} — llms.txt request`,
-        from_name: "Hospital Analyzer",
+        from_name: "AgentVitals",
         message: [
-          `New llms.txt file request from the Hospital Website Agentic Readiness Analyzer.`,
+          `New llms.txt file request from AgentVitals.`,
           ``,
           `Email: ${body.email}`,
           `Website analyzed: ${body.url}`,
