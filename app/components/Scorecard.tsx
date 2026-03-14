@@ -29,9 +29,17 @@ function gradeRing(grade: Grade): string {
   }
 }
 
-function gradeBg(): string {
-  // Branded background — solid red from hospitalwebsites.com palette
-  return "from-[#f45e5e] to-[#e04a4a]";
+function gradeBg(grade: Grade): string {
+  switch (grade) {
+    case "A":
+      return "from-green-50 to-emerald-50";
+    case "B":
+      return "from-blue-50 to-indigo-50";
+    case "C":
+      return "from-yellow-50 to-amber-50";
+    case "D":
+      return "from-red-50 to-rose-50";
+  }
 }
 
 export default function Scorecard({ data }: { data: AnalysisResponse }) {
@@ -39,9 +47,9 @@ export default function Scorecard({ data }: { data: AnalysisResponse }) {
     <div className="max-w-4xl mx-auto animate-fade-in-up">
       {/* Overall Grade */}
       <div
-        className={`text-center px-8 py-12 rounded-3xl bg-gradient-to-br ${gradeBg()} mb-8`}
+        className={`text-center px-8 py-12 rounded-3xl bg-gradient-to-br ${gradeBg(data.overallGrade)} mb-8`}
       >
-        <p className="text-xs uppercase tracking-widest text-white/70 font-semibold mb-4">
+        <p className="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-4">
           Overall Agentic Readiness
         </p>
         <div
@@ -49,18 +57,18 @@ export default function Scorecard({ data }: { data: AnalysisResponse }) {
         >
           <span className="text-5xl font-bold">{data.overallGrade}</span>
         </div>
-        <p className="mt-4 text-xl font-semibold text-white">
+        <p className="mt-4 text-xl font-semibold text-slate-800">
           {overallGradeLabel(data.overallGrade)}
         </p>
-        <p className="mt-1 text-sm text-white/80">
+        <p className="mt-1 text-sm text-slate-500">
           Score: {data.overallScore}/100
         </p>
         {data.mode === "doctor-finder" && (
-          <p className="mt-3 inline-block text-xs bg-white/20 text-white px-3 py-1 rounded-full">
+          <p className="mt-3 inline-block text-xs bg-white/80 text-slate-500 px-3 py-1 rounded-full">
             Analyzed as a Provider Directory page
           </p>
         )}
-        <p className="mt-4 text-xs text-white/60">
+        <p className="mt-4 text-xs text-slate-400">
           {data.url}
         </p>
       </div>
