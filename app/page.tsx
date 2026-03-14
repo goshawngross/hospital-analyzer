@@ -21,6 +21,9 @@ export default function Home() {
     setError("");
     setApiDone(false);
 
+    const MIN_DISPLAY_TIME = 15000; // 15 seconds minimum loading experience
+    const startTime = Date.now();
+
     try {
       const res = await fetch("/api/analyze", {
         method: "POST",
@@ -37,12 +40,18 @@ export default function Home() {
       }
 
       setResults(data);
-      setApiDone(true);
 
-      // Brief pause to let progress animation finish
+      // Wait for the full 15-second animation before revealing results
+      const elapsed = Date.now() - startTime;
+      const remaining = Math.max(0, MIN_DISPLAY_TIME - elapsed);
+
       setTimeout(() => {
-        setState("results");
-      }, 800);
+        setApiDone(true);
+        // Then pause briefly after final checkmarks appear
+        setTimeout(() => {
+          setState("results");
+        }, 1200);
+      }, remaining);
     } catch {
       setError("Network error. Please check your connection and try again.");
       setState("error");
