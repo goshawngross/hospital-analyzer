@@ -8,7 +8,7 @@ export default function Header() {
           <img
             src="/agentvitals-icon.png"
             alt=""
-            className="h-7 sm:h-8 w-auto mb-2 sm:mb-2.5"
+            className="h-10 sm:h-12 w-auto mb-2 sm:mb-2"
           />
           <div>
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-800 leading-none">
