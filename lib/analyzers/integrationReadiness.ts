@@ -161,7 +161,7 @@ export async function analyzeIntegrationReadiness(
   }
 
   return {
-    pillar: "Integration Protocol Readiness",
+    pillar: "Integration Readiness",
     slug: "integration-readiness",
     grade: scoreToGrade(score),
     score,

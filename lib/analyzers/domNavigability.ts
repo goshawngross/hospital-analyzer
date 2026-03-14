@@ -147,7 +147,7 @@ export function analyzeDomNavigability($: CheerioAPI): PillarResult {
   }
 
   return {
-    pillar: "DOM Navigability",
+    pillar: "Navigation Readiness",
     slug: "dom-navigability",
     grade: scoreToGrade(score),
     score,

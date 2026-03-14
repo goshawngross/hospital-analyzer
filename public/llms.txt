@@ -6,10 +6,10 @@
 
 AgentVitals scores hospital websites across four pillars:
 
-- **Semantic Richness** (25%): Structured data, Schema.org markup, JSON-LD, OpenGraph metadata
-- **Actionability Surface** (30%): Booking links, appointment scheduling, digital pathways vs phone-only, CTAs
-- **DOM Navigability** (25%): ARIA labels, semantic HTML, accessibility, server-rendered content
-- **Integration Protocol Readiness** (20%): robots.txt, llms.txt, sitemap.xml, FHIR endpoints, OpenAPI specs, AI plugin manifests
+- **Semantic Readiness** (25%): Structured data, Schema.org markup, JSON-LD, OpenGraph metadata
+- **Actionability Readiness** (30%): Booking links, appointment scheduling, digital pathways vs phone-only, CTAs
+- **Navigation Readiness** (25%): ARIA labels, semantic HTML, accessibility, server-rendered content
+- **Integration Readiness** (20%): robots.txt, llms.txt, sitemap.xml, FHIR endpoints, OpenAPI specs, AI plugin manifests
 
 Each pillar receives a letter grade (A through D) and the site receives an overall AI Readiness score out of 100.
 

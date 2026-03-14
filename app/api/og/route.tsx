@@ -75,7 +75,7 @@ export async function GET() {
             marginTop: "24px",
           }}
         >
-          {["Semantic Richness", "Actionability", "DOM Navigability", "Integration Readiness"].map(
+          {["Semantic Readiness", "Actionability Readiness", "Navigation Readiness", "Integration Readiness"].map(
             (label) => (
               <div
                 key={label}

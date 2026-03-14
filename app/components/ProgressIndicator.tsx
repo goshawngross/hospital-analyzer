@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const STEPS = [
   {
-    label: "Semantic Richness",
+    label: "Semantic Readiness",
     substeps: [
       "Scanning for JSON-LD structured data...",
       "Checking Schema.org healthcare types...",
@@ -13,7 +13,7 @@ const STEPS = [
     ],
   },
   {
-    label: "Actionability Surface",
+    label: "Actionability Readiness",
     substeps: [
       "Identifying booking & scheduling CTAs...",
       "Detecting phone-only friction points...",
@@ -22,7 +22,7 @@ const STEPS = [
     ],
   },
   {
-    label: "DOM Navigability",
+    label: "Navigation Readiness",
     substeps: [
       "Testing ARIA labels on interactive elements...",
       "Scanning for CAPTCHA barriers...",

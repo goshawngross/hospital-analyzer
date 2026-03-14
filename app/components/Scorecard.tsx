@@ -50,7 +50,7 @@ export default function Scorecard({ data }: { data: AnalysisResponse }) {
         className={`text-center px-8 py-12 rounded-3xl bg-gradient-to-br ${gradeBg(data.overallGrade)} mb-8`}
       >
         <p className="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-4">
-          Overall AI Readiness
+          Your AI Vitals
         </p>
         <div
           className={`inline-flex items-center justify-center w-28 h-28 rounded-full ring-4 ${gradeRing(data.overallGrade)} bg-white`}
