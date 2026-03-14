@@ -20,19 +20,23 @@ export default function SpecialOffer({ data }: { data: AnalysisResponse }) {
     setError("");
 
     try {
-      const res = await fetch("/api/capture-lead", {
+      // Send directly to Web3Forms (client-side, free tier)
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          access_key: "8a27b57d-65d6-4e09-a95c-a23c40d9ab72",
+          subject: `New Lead: ${email.trim()} — llms.txt request`,
+          from_name: "Hospital Analyzer",
           email: email.trim(),
-          url: data.url,
-          overallGrade: data.overallGrade,
-          overallScore: data.overallScore,
-          timestamp: new Date().toISOString(),
+          "Website Analyzed": data.url,
+          "Overall Grade": `${data.overallGrade} (${data.overallScore}/100)`,
+          message: `${email.trim()} wants a custom llms.txt file for ${data.url}. Their site scored ${data.overallGrade} (${data.overallScore}/100).`,
         }),
       });
 
-      if (!res.ok) throw new Error("Failed to submit");
+      const result = await res.json();
+      if (!result.success) throw new Error("Failed to submit");
       setSubmitted(true);
     } catch {
       setError("Something went wrong. Please try again.");
