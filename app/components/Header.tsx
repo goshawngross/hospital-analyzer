@@ -26,7 +26,7 @@ export default function Header() {
             {" "}
             <span className="text-slate-300">&amp;</span>{" "}
             <a
-              href="https://combinaut.com"
+              href="https://www.sparkle.health/"
               target="_blank"
               rel="noopener"
               className="hover:text-blue-600 transition-colors"

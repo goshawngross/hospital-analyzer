@@ -28,7 +28,7 @@ export default function CtaSection({ data }: { data: AnalysisResponse }) {
 
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           <a
-            href="https://combinaut.com"
+            href="https://www.sparkle.health/"
             target="_blank"
             rel="noopener"
             className="px-8 py-3.5 rounded-2xl bg-white text-slate-900 font-medium text-sm
@@ -60,7 +60,7 @@ export default function CtaSection({ data }: { data: AnalysisResponse }) {
             </a>{" "}
             and{" "}
             <a
-              href="https://combinaut.com"
+              href="https://www.sparkle.health/"
               target="_blank"
               rel="noopener"
               className="text-slate-400 hover:text-white transition-colors"
