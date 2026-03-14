@@ -6,6 +6,7 @@ import AnalyzerForm from "./components/AnalyzerForm";
 import ProgressIndicator from "./components/ProgressIndicator";
 import Scorecard from "./components/Scorecard";
 import CtaSection from "./components/CtaSection";
+import SpecialOffer from "./components/SpecialOffer";
 import { AnalysisResponse } from "@/lib/types";
 
 type AppState = "idle" | "loading" | "results" | "error";
@@ -111,6 +112,7 @@ export default function Home() {
 
             <Scorecard data={results} />
             <CtaSection data={results} />
+            <SpecialOffer data={results} />
           </div>
         )}
 

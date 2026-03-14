@@ -90,6 +90,10 @@ export async function POST(req: NextRequest) {
     const pillars = [semantic, actionability, domNav, integration];
     const { score: overallScore, grade: overallGrade } = computeOverallScore(pillars);
 
+    // Check if llms.txt was found in integration findings
+    const llmsFinding = integration.findings.find(f => f.label.includes("llms.txt"));
+    const hasLlmsTxt = llmsFinding?.found ?? false;
+
     const response: AnalysisResponse = {
       url,
       fetchedAt: new Date().toISOString(),
@@ -97,6 +101,7 @@ export async function POST(req: NextRequest) {
       overallScore,
       mode,
       pillars,
+      hasLlmsTxt,
     };
 
     return NextResponse.json(response);

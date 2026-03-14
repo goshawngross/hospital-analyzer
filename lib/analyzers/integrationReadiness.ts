@@ -11,7 +11,7 @@ export async function analyzeIntegrationReadiness(
   const recommendations: string[] = [];
 
   // Probe well-known endpoints in parallel
-  const [robotsResult, aiPluginResult, swaggerResult, openApiResult, fhirResult, sitemapResult] =
+  const [robotsResult, aiPluginResult, swaggerResult, openApiResult, fhirResult, sitemapResult, llmsTxtResult] =
     await Promise.all([
       probeEndpoint(`${baseUrl}/robots.txt`),
       probeEndpoint(`${baseUrl}/.well-known/ai-plugin.json`),
@@ -19,6 +19,7 @@ export async function analyzeIntegrationReadiness(
       probeEndpoint(`${baseUrl}/openapi.json`),
       probeEndpoint(`${baseUrl}/fhir/metadata`),
       probeEndpoint(`${baseUrl}/sitemap.xml`),
+      probeEndpoint(`${baseUrl}/llms.txt`),
     ]);
 
   // robots.txt
@@ -62,6 +63,22 @@ export async function analyzeIntegrationReadiness(
   if (!aiPluginResult.exists) {
     recommendations.push(
       "Create an ai-plugin.json manifest at /.well-known/ai-plugin.json to let AI assistants discover and interact with your site's capabilities."
+    );
+  }
+
+  // llms.txt — AI content map
+  const hasLlmsTxt = llmsTxtResult.exists && (llmsTxtResult.body || "").length > 50;
+  findings.push({
+    label: "llms.txt file (AI content map)",
+    found: hasLlmsTxt,
+    detail: hasLlmsTxt
+      ? "llms.txt found — AI models can discover and understand your key content"
+      : "No llms.txt file found — AI models have no curated map of your content",
+    weight: 15,
+  });
+  if (!hasLlmsTxt) {
+    recommendations.push(
+      "Add an llms.txt file to your site root. This emerging standard provides AI models with a curated map of your most important content — services, locations, providers, and conditions — dramatically improving how AI assistants surface your organization."
     );
   }
 

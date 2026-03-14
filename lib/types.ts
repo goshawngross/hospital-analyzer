@@ -21,6 +21,7 @@ export interface AnalysisResponse {
   overallScore: number;
   mode: "main" | "doctor-finder";
   pillars: PillarResult[];
+  hasLlmsTxt: boolean;
   error?: string;
 }
 

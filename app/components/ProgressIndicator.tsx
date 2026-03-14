@@ -35,6 +35,7 @@ const STEPS = [
     substeps: [
       "Probing for AI plugin manifest...",
       "Checking robots.txt for AI directives...",
+      "Looking for llms.txt AI content map...",
       "Scanning for FHIR API endpoints...",
       "Looking for OpenAPI specifications...",
     ],
