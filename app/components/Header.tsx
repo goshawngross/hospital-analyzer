@@ -3,12 +3,12 @@ export default function Header() {
     <header className="w-full border-b border-slate-200/60 bg-white/70 backdrop-blur-xl sticky top-0 z-50">
       <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* AgentVitals logo — icon + name + tagline */}
-        <div className="flex items-end gap-1">
+        <div className="flex items-end gap-1.5">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/agentvitals-icon.png"
             alt=""
-            className="h-8 sm:h-9 w-auto mb-2.5 sm:mb-3"
+            className="h-7 sm:h-8 w-auto mb-2 sm:mb-2.5"
           />
           <div>
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-800 leading-none">
