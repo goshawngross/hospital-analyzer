@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 
 export const runtime = "nodejs";
 
+const WEB3FORMS_KEY = "8a27b57d-65d6-4e09-a95c-a23c40d9ab72";
+
 interface LeadCapture {
   email: string;
   url: string;
@@ -21,18 +23,38 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Log the lead for now — visible in Vercel function logs
-    // In production, connect to a database, email service, or CRM
-    console.log("=== NEW LEAD CAPTURED ===");
-    console.log(JSON.stringify({
+    // Send email notification via Web3Forms
+    const emailRes = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_KEY,
+        subject: `New Lead: ${body.email} — llms.txt request`,
+        from_name: "Hospital Analyzer",
+        message: [
+          `New llms.txt file request from the Hospital Website Agentic Readiness Analyzer.`,
+          ``,
+          `Email: ${body.email}`,
+          `Website analyzed: ${body.url}`,
+          `Overall grade: ${body.overallGrade} (${body.overallScore}/100)`,
+          `Submitted: ${body.timestamp}`,
+          ``,
+          `This person wants a custom llms.txt file created for their hospital website.`,
+        ].join("\n"),
+      }),
+    });
+
+    if (!emailRes.ok) {
+      console.error("Web3Forms error:", await emailRes.text());
+    }
+
+    // Also log to Vercel function logs as backup
+    console.log("=== NEW LEAD ===", JSON.stringify({
       email: body.email,
       url: body.url,
-      overallGrade: body.overallGrade,
-      overallScore: body.overallScore,
-      timestamp: body.timestamp,
-      capturedAt: new Date().toISOString(),
-    }, null, 2));
-    console.log("=========================");
+      grade: body.overallGrade,
+      score: body.overallScore,
+    }));
 
     return NextResponse.json({ success: true });
   } catch {
