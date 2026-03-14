@@ -122,6 +122,19 @@ export default function Home() {
             This analysis evaluates the publicly accessible HTML of your website.
             It does not access authenticated areas or store any data.
           </p>
+          <p className="mt-4 text-xs text-slate-500">
+            This lightweight web app was designed and developed to help generate leads
+            for smart health tech brands. Need one of your own?{" "}
+            <a
+              href="https://www.shawnb2b.com"
+              target="_blank"
+              rel="noopener"
+              className="text-slate-700 font-medium hover:text-slate-900 transition-colors underline underline-offset-2"
+            >
+              Contact Shawn Gross
+            </a>{" "}
+            to learn more.
+          </p>
         </footer>
       </main>
     </div>

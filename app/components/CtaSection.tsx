@@ -36,15 +36,6 @@ export default function CtaSection({ data }: { data: AnalysisResponse }) {
           >
             See How Sparkle Fixes This
           </a>
-          <a
-            href="https://hospitalwebsites.com"
-            target="_blank"
-            rel="noopener"
-            className="px-8 py-3.5 rounded-2xl bg-slate-700 text-white font-medium text-sm
-              hover:bg-slate-600 transition-colors ring-1 ring-slate-600"
-          >
-            Talk to a Hospital Web Strategist
-          </a>
         </div>
 
         <div className="mt-10 pt-6 border-t border-slate-700">
