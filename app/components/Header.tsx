@@ -8,13 +8,13 @@ export default function Header() {
           <img
             src="/agentvitals-icon.png"
             alt=""
-            className="h-9 w-auto"
+            className="h-10 sm:h-12 w-auto"
           />
           <div>
-            <h1 className="text-xl font-bold tracking-tight text-slate-800 leading-tight">
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-800 leading-tight">
               AgentVitals
             </h1>
-            <p className="text-[10px] text-slate-400 tracking-wide leading-tight">
+            <p className="text-[10px] sm:text-xs text-slate-400 tracking-wide leading-tight">
               The AI readiness check for hospital websites
             </p>
           </div>
