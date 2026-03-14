@@ -37,9 +37,9 @@ export default function Header() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/sparkle-logo.svg"
+                src="/sparkle-logo.png"
                 alt="Sparkle"
-                className="h-6 w-auto"
+                className="h-7 w-auto"
               />
             </a>
           </div>
