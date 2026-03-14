@@ -10,30 +10,39 @@ export default function Header() {
             For Hospital &amp; Health System Websites
           </p>
         </div>
-        <div className="text-right">
-          <p className="text-[10px] uppercase tracking-widest text-slate-400 font-medium">
+        <div className="flex items-center gap-4">
+          <p className="text-[10px] uppercase tracking-widest text-slate-400 font-medium hidden sm:block">
             Brought to you by
           </p>
-          <p className="text-xs text-slate-600 font-medium">
+          <div className="flex items-center gap-3">
             <a
               href="https://hospitalwebsites.com"
               target="_blank"
               rel="noopener"
-              className="hover:text-blue-600 transition-colors"
+              className="opacity-80 hover:opacity-100 transition-opacity"
             >
-              HospitalWebsites.com
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/hospitalwebsites-logo.webp"
+                alt="HospitalWebsites.com"
+                className="h-7 w-auto"
+              />
             </a>
-            {" "}
-            <span className="text-slate-300">&amp;</span>{" "}
+            <span className="text-slate-300 text-xs">&amp;</span>
             <a
               href="https://www.sparkle.health/"
               target="_blank"
               rel="noopener"
-              className="hover:text-blue-600 transition-colors"
+              className="opacity-80 hover:opacity-100 transition-opacity"
             >
-              Sparkle
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/sparkle-logo.svg"
+                alt="Sparkle"
+                className="h-6 w-auto"
+              />
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </header>

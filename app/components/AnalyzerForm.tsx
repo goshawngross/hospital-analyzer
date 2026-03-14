@@ -20,7 +20,7 @@ export default function AnalyzerForm({ onSubmit, isLoading }: AnalyzerFormProps)
       <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 leading-tight">
         Is your hospital website
         <br />
-        <span className="bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-[#f45e5e] to-[#d63384] bg-clip-text text-transparent">
           ready for AI agents?
         </span>
       </h2>

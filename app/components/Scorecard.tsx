@@ -29,17 +29,9 @@ function gradeRing(grade: Grade): string {
   }
 }
 
-function gradeBg(grade: Grade): string {
-  switch (grade) {
-    case "A":
-      return "from-green-50 to-emerald-50";
-    case "B":
-      return "from-blue-50 to-indigo-50";
-    case "C":
-      return "from-yellow-50 to-amber-50";
-    case "D":
-      return "from-red-50 to-rose-50";
-  }
+function gradeBg(): string {
+  // Branded background — soft red from hospitalwebsites.com palette (#f45e5e)
+  return "from-[#fff5f5] to-[#ffe4e4]";
 }
 
 export default function Scorecard({ data }: { data: AnalysisResponse }) {
@@ -47,7 +39,7 @@ export default function Scorecard({ data }: { data: AnalysisResponse }) {
     <div className="max-w-4xl mx-auto animate-fade-in-up">
       {/* Overall Grade */}
       <div
-        className={`text-center px-8 py-12 rounded-3xl bg-gradient-to-br ${gradeBg(data.overallGrade)} mb-8`}
+        className={`text-center px-8 py-12 rounded-3xl bg-gradient-to-br ${gradeBg()} mb-8`}
       >
         <p className="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-4">
           Overall Agentic Readiness
