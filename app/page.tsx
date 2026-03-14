@@ -125,8 +125,8 @@ export default function Home() {
             It does not access authenticated areas or store any data.
           </p>
           <p className="mt-4 text-xs text-slate-500">
-            This web app was created to generate leads for smart healthcare tech
-            brands and agencies. Need one of your own?{" "}
+            This lightweight web app was designed and developed to generate leads
+            for smart healthcare tech brands and agencies. Need one of your own?{" "}
             <a
               href="https://hospitalwebsites.com/contact/"
               target="_blank"
