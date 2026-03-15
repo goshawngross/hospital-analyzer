@@ -4,7 +4,7 @@ import { AnalysisResponse } from "@/lib/types";
 
 export default function InsightBridge({ data }: { data: AnalysisResponse }) {
   const actionabilityPillar = data.pillars.find(
-    (p) => p.slug === "actionability"
+    (p) => p.slug === "actionability-readiness"
   );
   const actionGrade = actionabilityPillar?.grade ?? data.overallGrade;
 

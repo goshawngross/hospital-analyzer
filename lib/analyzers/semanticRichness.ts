@@ -167,7 +167,7 @@ export function analyzeSemanticRichness(
 
   return {
     pillar: "Semantic Readiness",
-    slug: "semantic-richness",
+    slug: "semantic-readiness",
     grade: scoreToGrade(score),
     score,
     findings,

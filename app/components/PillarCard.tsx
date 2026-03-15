@@ -4,8 +4,11 @@ import { useState } from "react";
 import { PillarResult, Grade } from "@/lib/types";
 
 const PILLAR_ICONS: Record<string, string> = {
+  "semantic-readiness": "{ }",
   "semantic-richness": "{ }",
+  "actionability-readiness": ">>",
   actionability: ">>",
+  "navigation-readiness": "</>",
   "dom-navigability": "</>",
   "integration-readiness": "API",
 };

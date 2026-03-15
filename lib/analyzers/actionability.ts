@@ -145,7 +145,7 @@ export function analyzeActionability(
 
   return {
     pillar: "Actionability Readiness",
-    slug: "actionability",
+    slug: "actionability-readiness",
     grade: scoreToGrade(score),
     score,
     findings,
