@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "AgentVitals — The AI Readiness Check for Hospital Websites",
     description:
       "Is your hospital website ready for AI agents? Get a free scorecard evaluating how well AI can understand, navigate, and book appointments on your site.",
-    images: [{ url: "/api/og", width: 1200, height: 630 }],
+    images: [{ url: "/og-image.png", width: 1024, height: 1024 }],
     type: "website",
     url: "https://hospital-analyzer.vercel.app",
   },
@@ -18,11 +18,11 @@ export const metadata: Metadata = {
     title: "AgentVitals — The AI Readiness Check for Hospital Websites",
     description:
       "Is your hospital website ready for AI agents? Get a free scorecard with grades and recommendations.",
-    images: ["/api/og"],
+    images: ["/og-image.png"],
   },
   icons: {
     icon: "/favicon.png",
-    apple: "/favicon.png",
+    apple: "/apple-touch-icon.png",
   },
 };
 
