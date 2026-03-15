@@ -20,41 +20,10 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Partner logos — hidden on mobile, shown on sm+ */}
-        <div className="hidden sm:flex items-center gap-4">
-          <p className="text-[10px] uppercase tracking-widest text-slate-400 font-medium">
-            Brought to you by
-          </p>
-          <div className="flex items-center gap-3">
-            <a
-              href="https://hospitalwebsites.com"
-              target="_blank"
-              rel="noopener"
-              className="opacity-80 hover:opacity-100 transition-opacity"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/hospitalwebsites-logo.webp"
-                alt="HospitalWebsites.com"
-                className="h-7 w-auto"
-              />
-            </a>
-            <span className="text-slate-300 text-xs">&amp;</span>
-            <a
-              href="https://www.sparkle.health/"
-              target="_blank"
-              rel="noopener"
-              className="opacity-80 hover:opacity-100 transition-opacity"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/sparkle-logo.png"
-                alt="Sparkle"
-                className="h-7 w-auto"
-              />
-            </a>
-          </div>
-        </div>
+        {/* Brought to you by — hidden on mobile, shown on sm+ */}
+        <p className="hidden sm:block text-[10px] uppercase tracking-widest text-slate-400 font-medium">
+          Brought to you by Hello Health
+        </p>
       </div>
     </header>
   );
