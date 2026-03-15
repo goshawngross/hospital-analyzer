@@ -27,7 +27,7 @@ export default function CtaSection({ data }: { data: AnalysisResponse }) {
 
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           <a
-            href="https://www.sparkle.health/"
+            href="https://www.google.com"
             target="_blank"
             rel="noopener"
             className="px-8 py-3.5 rounded-2xl bg-white text-slate-900 font-medium text-sm
